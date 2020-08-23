@@ -1,5 +1,7 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
 /.vs/MicroRabbit
+MicroRabbit.Domain.Core/bin/
+MicroRabbit.Domain.Core/obj/
