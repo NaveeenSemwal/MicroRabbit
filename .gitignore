@@ -7,3 +7,5 @@ MicroRabbit.Domain.Core/bin/
 MicroRabbit.Domain.Core/obj/
 MicroRabbit.Infra.Bus/bin/
 MicroRabbit.Infra.Bus/obj/
+MicroRabbit.Infra.IoC/bin/
+MicroRabbit.Infra.IoC/obj/

@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Domain.Core", "MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj", "{66758BE6-C550-48F4-AE3E-0161A46DEE77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Infra.Bus", "MicroRabbit.Infra.Bus\MicroRabbit.Infra.Bus.csproj", "{3DA87DC2-AD0C-4039-A140-598DB92F184C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Infra.Bus", "MicroRabbit.Infra.Bus\MicroRabbit.Infra.Bus.csproj", "{3DA87DC2-AD0C-4039-A140-598DB92F184C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Infra.IoC", "MicroRabbit.Infra.IoC\MicroRabbit.Infra.IoC.csproj", "{FE990258-AD75-480B-ADB0-6B378E49468A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{3DA87DC2-AD0C-4039-A140-598DB92F184C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA87DC2-AD0C-4039-A140-598DB92F184C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA87DC2-AD0C-4039-A140-598DB92F184C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE990258-AD75-480B-ADB0-6B378E49468A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE990258-AD75-480B-ADB0-6B378E49468A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE990258-AD75-480B-ADB0-6B378E49468A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE990258-AD75-480B-ADB0-6B378E49468A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{66758BE6-C550-48F4-AE3E-0161A46DEE77} = {B07342BD-4623-4855-8775-0074A9C7D59E}
 		{3DA87DC2-AD0C-4039-A140-598DB92F184C} = {D04AF9C5-6018-4750-A45D-0D3FEDFFCE37}
+		{FE990258-AD75-480B-ADB0-6B378E49468A} = {F2E767A4-CE11-47DA-BFCB-CED75D7B7727}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A089FC39-C382-4C95-9ADC-AA0D3288BC6C}
