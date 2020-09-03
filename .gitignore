@@ -9,3 +9,11 @@ MicroRabbit.Infra.Bus/bin/
 MicroRabbit.Infra.Bus/obj/
 MicroRabbit.Infra.IoC/bin/
 MicroRabbit.Infra.IoC/obj/
+MicroRabbit.Banking.Api/bin/
+MicroRabbit.Banking.Api/obj/
+MicroRabbit.Banking.Application/bin/
+MicroRabbit.Banking.Application/obj/
+MicroRabbit.Banking.Data/bin/
+MicroRabbit.Banking.Data/obj/
+MicroRabbit.Banking.Domain/bin/
+MicroRabbit.Banking.Domain/obj/
