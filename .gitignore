@@ -18,3 +18,11 @@ MicroRabbit.Banking.Data/obj/
 MicroRabbit.Banking.Domain/bin/
 MicroRabbit.Banking.Domain/obj/
 MicroRabbit.Banking.Api/MicroRabbit.Banking.Api.csproj.user
+MicroRabbit.Transfer.Api/bin/
+MicroRabbit.Transfer.Api/obj/
+MicroRabbit.Transfer.Application/bin/
+MicroRabbit.Transfer.Application/obj/
+MicroRabbit.Transfer.Data/bin/
+MicroRabbit.Transfer.Data/obj/
+MicroRabbit.Transfer.Domain/bin/
+MicroRabbit.Transfer.Domain/obj/
