@@ -42,7 +42,7 @@ namespace MicroRabbit.Banking.Api
 
             // Issue :  https://stackoverflow.com/questions/61543605/unable-to-resolve-service-for-type-mediatr-imediator
             // https://medium.com/aeturnuminc/microservices-using-mediatr-on-net-core-3-1-with-exception-handling-c273a7aa4a70
-            services.AddMediatR(typeof(RabbitMQBus));
+            services.AddMediatR(typeof(Startup));
 
             services.AddSwaggerGen(x =>
             {
