@@ -6,8 +6,12 @@ using MediatR;
 using MicroRabbit.Banking.Domain.Events;
 using MicroRabbit.Domain.Core.Bus;
 using MicroRabbit.Infra.IoC;
+using MicroRabbit.Transfer.Application.Interfaces;
+using MicroRabbit.Transfer.Application.Services;
 using MicroRabbit.Transfer.Data.Context;
+using MicroRabbit.Transfer.Data.Repository;
 using MicroRabbit.Transfer.Domain.EventHandlers;
+using MicroRabbit.Transfer.Domain.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -49,6 +53,11 @@ namespace MicroRabbit.Transfer.Api
             {
                 x.SwaggerDoc("v1", new OpenApiInfo { Title = "Transfer Microservice", Version = "v1" });
             });
+
+
+          
+
+          
 
             RegisterServices(services);
         }

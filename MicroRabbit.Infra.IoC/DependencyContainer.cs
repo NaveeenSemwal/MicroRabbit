@@ -25,32 +25,40 @@ namespace MicroRabbit.Infra.IoC
         public static void RegisterServices(IServiceCollection services, string serviceType)
         {
             // Domian bus
-            services.AddTransient<IEventBus, RabbitMQBus>();
+            services.AddSingleton<IEventBus, RabbitMQBus>(x =>
+            {
+                // Here we are injecting IServiceScopeFactory's object in the RabbitMQBus's constructor in order to pass its dependency
+                var scopeFactory = x.GetRequiredService<IServiceScopeFactory>();
+                return new RabbitMQBus(x.GetService<IMediator>(), scopeFactory);
+            });
 
-
-            services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
-
-
-            if (serviceType=="Banking")
+            if (serviceType == "Banking")
             {
                 services.AddTransient<IAccountService, AccountService>();
                 services.AddTransient<IAccountRepository, AccountRepository>();
                 services.AddTransient<BankingDbContext>();
-
             }
             else
             {
+
                 services.AddTransient<ITransferService, TransferService>();
                 services.AddTransient<ITransferRepository, TransferRepository>();
                 services.AddTransient<TransferDbContext>();
 
+                // Subscriptions : So that any microservice can subscribe to it.
+                services.AddTransient<TransferEventHandler>();
             }
 
-          
-            // Banking Domain
+
+
+            // Domain Events
+            //services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
+
+            // Banking Domain Command
             services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
 
-         
+
+
         }
 
     }
