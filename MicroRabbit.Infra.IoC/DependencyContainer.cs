@@ -22,7 +22,7 @@ namespace MicroRabbit.Infra.IoC
 {
     public class DependencyContainer
     {
-        public static void RegisterServices(IServiceCollection services)
+        public static void RegisterServices(IServiceCollection services, string serviceType)
         {
             // Domian bus
             services.AddTransient<IEventBus, RabbitMQBus>();
@@ -31,19 +31,26 @@ namespace MicroRabbit.Infra.IoC
             services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
 
 
-            // Application
-            services.AddTransient<IAccountService, AccountService>();
-            services.AddTransient<ITransferService, TransferService>();
+            if (serviceType=="Banking")
+            {
+                services.AddTransient<IAccountService, AccountService>();
+                services.AddTransient<IAccountRepository, AccountRepository>();
+                services.AddTransient<BankingDbContext>();
 
+            }
+            else
+            {
+                services.AddTransient<ITransferService, TransferService>();
+                services.AddTransient<ITransferRepository, TransferRepository>();
+                services.AddTransient<TransferDbContext>();
+
+            }
+
+          
             // Banking Domain
             services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
 
-            // Data
-            services.AddTransient<IAccountRepository, AccountRepository>();
-            services.AddTransient<BankingDbContext>();
-
-            services.AddTransient<ITransferRepository, TransferRepository>();
-            services.AddTransient<TransferDbContext>();
+         
         }
 
     }

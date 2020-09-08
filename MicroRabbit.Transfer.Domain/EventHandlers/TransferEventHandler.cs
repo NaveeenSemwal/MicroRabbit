@@ -13,9 +13,15 @@ namespace MicroRabbit.Transfer.Domain.EventHandlers
         {
 
         }
+
+        /// <summary>
+        /// This will be called by RabbitMQ
+        /// </summary>
+        /// <param name="event"></param>
+        /// <returns></returns>
         public Task Handle(TransferCreatedEvent @event)
         {
-            return Task.FromResult(true);    
+            return Task.CompletedTask;  
         }
     }
 }
